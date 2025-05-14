@@ -1,0 +1,77 @@
+.order-history-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.order-history-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+}
+
+.order-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.status {
+  background-color: #38a169;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.date {
+  font-size: 13px;
+  color: #666;
+}
+
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px dashed #ccc;
+  padding-top: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.order-total {
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+.paid { color: green; }
+.cod { color: orange; }
+.empty-msg { color: #999; padding: 1rem; }

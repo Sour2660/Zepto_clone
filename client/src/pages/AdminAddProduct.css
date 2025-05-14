@@ -1,0 +1,22 @@
+.admin-add-product-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background-color: #fafafa;
+  }
+  .admin-add-product-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+  .admin-add-product-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

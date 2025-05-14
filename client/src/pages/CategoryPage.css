@@ -1,0 +1,249 @@
+/* Overall Layout */
+.fruits-page-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 220px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.08);
+  height: fit-content;
+  position: sticky;
+  top: 80px; /* So it stays fixed while scrolling */
+}
+
+.sidebar-category {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.sidebar-category:hover {
+  color: #ff6f61;
+}
+
+/* Main Content
+.main-content {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+} */
+
+.product-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-weight {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.price-section {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ff6f61;
+  color: white;
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 0px 0px 8px 0px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background: #fa7063;
+  border: none;
+  padding: 8px 20px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #dd6961;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fruits-page-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+
+/* Search issue fix that css below */
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+}
+
+/* Products Grid */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* Product Card */
+.product-card {
+  width: 200px;
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-weight {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.price-section {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  padding: 8px 12px;
+  background-color: #0a8d48;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #056b36;
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e60023;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sort-dropdown select {
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+}

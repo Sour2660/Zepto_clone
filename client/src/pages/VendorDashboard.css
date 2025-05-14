@@ -1,0 +1,243 @@
+/* .vendor-dashboard {
+  padding: 40px;
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.vendor-header h1 {
+  font-size: 32px;
+  color: #4a148c;
+  margin: 0;
+}
+
+.vendor-header span {
+  margin-right: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.vendor-header button {
+  background-color: #e53935;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vendor-header button:hover {
+  background-color: #c62828;
+}
+
+.add-product-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.add-product-form h2 {
+  font-size: 24px;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+.add-product-form input {
+  display: block;
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.add-product-form button {
+  background-color: #43a047;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+.add-product-form button:hover {
+  background-color: #2e7d32;
+}
+
+.product-list {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.product-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+.product-card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  color: #4a148c;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.product-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+} */
+
+
+.vendor-dashboard {
+  padding: 40px;
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.vendor-header h1 {
+  font-size: 32px;
+  color: #4a148c;
+  margin: 0;
+}
+
+.vendor-header span {
+  margin-right: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.vendor-header button {
+  background-color: #e53935;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vendor-header button:hover {
+  background-color: #c62828;
+}
+
+.add-product-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.add-product-form h2 {
+  font-size: 24px;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+.add-product-form input {
+  display: block;
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.add-product-form button {
+  background-color: #43a047;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+.add-product-form button:hover {
+  background-color: #2e7d32;
+}
+
+.product-list {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.product-list h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  color: #4a148c;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.product-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,69 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 110px; 
+    height: 44px; 
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Outer Oval Shape */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(183, 181, 181); 
+    border-radius: 50px; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+  
+  /* Moving Circle inside */
+  .slider::before {
+    content: "";
+    position: absolute;
+    height: 38px; 
+    width: 38px;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  
+  input:checked + .slider::before {
+    transform: translateX(58px); 
+    background-color: #28a745; 
+  }
+  
+
+.switch-text {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px; /* Increased font size */
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    transition: 0.4s;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  
+
+  .switch-text.active {
+    left: 10px;
+    right: auto;
+    color: #28a745; 
+  }

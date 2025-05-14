@@ -1,0 +1,46 @@
+/* AccountPage.css */
+.account-container {
+    background: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .account-sidebar {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .menu-list {
+    margin-top: 30px;
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s;
+  }
+  
+  .menu-item:hover {
+    color: #ff6f61;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .account-sidebar {
+      margin-bottom: 20px;
+    }
+  }
+  
