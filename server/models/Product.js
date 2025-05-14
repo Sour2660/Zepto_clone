@@ -1,18 +1,3 @@
-// backend/models/Product.js
-// import mongoose from 'mongoose';
-
-// const productSchema = new mongoose.Schema({
-//   name: { type: String, required: true },
-//   image: { type: String, required: true },     // corresponds to product.image
-//   price: { type: Number, required: true },
-//   description: { type: String },
-//   weight: { type: String },
-//   discount: { type: String },
-//   category: { type: String, required: true },
-// }, { timestamps: true });
-
-// const Product = mongoose.model('Product', productSchema);
-// export default Product;
 
 
 import mongoose from 'mongoose';
@@ -25,12 +10,11 @@ const productSchema = new mongoose.Schema({
   weight: { type: String },
   discount: { type: String },
   category: { type: String, required: true },
-  vendor: {
+  vendor: { // ✅ renamed to vendorId to match backend & frontend usage
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true, // Ensures only vendors can add
-  },
+    required: true
+  }
 }, { timestamps: true });
 
-const Product = mongoose.model('Product', productSchema);
-export default Product;
+export default mongoose.model('Product', productSchema);

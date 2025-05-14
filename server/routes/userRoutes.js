@@ -93,12 +93,12 @@
 
 import express from 'express';
 import User from '../models/User.js';
-import { protect } from '../middleware/authMiddleware.js';
+import { authenticateToken } from '../middleware/authMiddleware.js';
 import { authorizeRoles } from '../middleware/roleMiddleware.js';
 
 const router = express.Router();
 
-// ✅ Get user by phone, optional role
+// ✅ Public: Get user by phone, optional role filter
 router.get('/users/:phone', async (req, res) => {
   const roleQuery = req.query.role;
   const query = { phone: req.params.phone };
@@ -124,8 +124,8 @@ router.get('/users/:phone', async (req, res) => {
   }
 });
 
-// ✅ Admin: Get all users (optional role filter)
-router.get('/admin/users', protect, authorizeRoles('admin'), async (req, res) => {
+// ✅ Admin: Get all users (with optional role filter)
+router.get('/admin/users', authenticateToken, authorizeRoles('admin'), async (req, res) => {
   const roleFilter = req.query.role ? { role: req.query.role } : {};
   try {
     const users = await User.find(roleFilter).select('-password');
@@ -137,7 +137,7 @@ router.get('/admin/users', protect, authorizeRoles('admin'), async (req, res) =>
 });
 
 // ✅ Admin: Delete user by ID
-router.delete('/admin/users/:id', protect, authorizeRoles('admin'), async (req, res) => {
+router.delete('/admin/users/:id', authenticateToken, authorizeRoles('admin'), async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
     res.json({ message: 'User deleted successfully' });
