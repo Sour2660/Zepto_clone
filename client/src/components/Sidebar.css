@@ -1,43 +1,4 @@
-/* Sidebar.css
-.sidebar-container {
-    width: 250px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-right: 1px solid #eee;
-    min-height: 90vh;
-    position: sticky;
-    top: 0;
-  }
-  
-  .sidebar-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .sidebar-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar-item {
-    margin-bottom: 15px;
-  }
-  
-  .sidebar-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .sidebar-link:hover {
-    color: purple;
-    font-weight: bold;
-  }
-   */
+
 
 
    .sidebar-container {

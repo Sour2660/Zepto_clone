@@ -11,7 +11,7 @@
     height: 0;
   }
   
-  /* Outer Oval Shape */
+ 
   .slider {
     position: absolute;
     cursor: pointer;
@@ -25,7 +25,7 @@
     overflow: hidden;
   }
   
-  /* Moving Circle inside */
+ 
   .slider::before {
     content: "";
     position: absolute;
