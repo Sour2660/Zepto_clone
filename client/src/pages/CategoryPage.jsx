@@ -162,7 +162,8 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchCategoryProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products');
+        // const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get('http://13.203.224.133:5000/api/products');
         const dbCategory = categorySlugMapper[categoryName] || categoryName;
 
         const filtered = res.data.filter(
