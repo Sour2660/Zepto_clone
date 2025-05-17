@@ -207,7 +207,7 @@ const Home = () => {
               {/* Slider Cards */}
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty1.png"
+                  src="/Slider/Beauty1.png"
                   alt="Beauty 1"
                   style={{
                     width: "110px",
@@ -218,7 +218,7 @@ const Home = () => {
               </div>
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty2.png"
+                  src="/Slider/Beauty2.png"
                   alt="Beauty 2"
                   style={{
                     width: "110px",
@@ -229,7 +229,7 @@ const Home = () => {
               </div>
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty3.png"
+                  src="/Slider/Beauty3.png"
                   alt="Beauty 3"
                   style={{
                     width: "110px",
@@ -240,7 +240,7 @@ const Home = () => {
               </div>
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty4.png"
+                  src="/Slider/Beauty4.png"
                   alt="Beauty 4"
                   style={{
                     width: "110px",
@@ -251,7 +251,7 @@ const Home = () => {
               </div>
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty5.png"
+                  src="/Slider/Beauty5.png"
                   alt="Beauty 5"
                   style={{
                     width: "110px",
@@ -262,7 +262,7 @@ const Home = () => {
               </div>
               <div className="deals-card d-inline-block mx-2">
                 <img
-                  src="/Slider/beauty6.png"
+                  src="/Slider/Beauty6.png"
                   alt="Beauty 6"
                   style={{
                     width: "110px",
@@ -283,7 +283,7 @@ const Home = () => {
             style={{ overflow: "hidden", background: "#f7f7f7" }}
           >
             <img
-              src="/Cards/LifeCover.webp"
+              src="/cards/LifeCover.webp"
               alt="Life Cover"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
@@ -296,7 +296,7 @@ const Home = () => {
             style={{ overflow: "hidden", background: "#f7f7f7" }}
           >
             <img
-              src="/Cards/JioHotstar.webp"
+              src="/cards/JioHotstar.webp"
               alt="JioHotstar"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
@@ -309,7 +309,7 @@ const Home = () => {
             style={{ overflow: "hidden", background: "#f7f7f7" }}
           >
             <img
-              src="/Cards/ZeroForex.webp"
+              src="/cards/ZeroForex.webp"
               alt="Zero Forex"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
@@ -322,7 +322,7 @@ const Home = () => {
             style={{ overflow: "hidden", background: "#f7f7f7" }}
           >
             <img
-              src="/Cards/SavingAcc.webp"
+              src="/cards/SavingAcc.webp"
               alt="Bank Savings"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
