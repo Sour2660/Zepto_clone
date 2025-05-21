@@ -1,7 +1,7 @@
 /* Zepto Footer Base */
 .zepto-footer {
     background-color: #fafafa;
-    font-size: 14px;
+    font-size: 18px;
     color: #555;
     padding: 2rem 1rem;
   }
@@ -85,3 +85,61 @@
   .zepto-footer a:hover i {
     color: #e0005a;
   }
+  .category-link {
+  font-size: 16px;
+  color: #2c2c2c;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+.popular-searches {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #212529;
+  line-height: 1.6;
+}
+
+.popular-searches strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.search-items {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.search-items:hover {
+  color: #000;
+  cursor: pointer;
+}
+.social-icons i {
+  font-size: 20px;
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #000;
+}
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-links {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
