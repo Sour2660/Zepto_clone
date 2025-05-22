@@ -1,4 +1,4 @@
-
+/* 
 
 .payment-container {
     padding: 2rem;
@@ -62,7 +62,7 @@
   
   .checkout-button {
     width: 100%;
-    background-color: #28a745;
+    background-color: #65db81;
     color: white;
     padding: 0.75rem;
     font-weight: bold;
@@ -74,6 +74,120 @@
   }
   
   .checkout-button:hover {
-    background-color: #218838;
+    background-color: #73e690;
   }
+   
+
+
   
+
+     */
+
+
+     .payment-container {
+  padding: 3rem 5%;
+  background-color: #f7f9fb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.payment-address,
+.payment-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.payment-address h3,
+.payment-summary h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.address-form input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: #fefefe;
+  transition: border 0.3s ease;
+}
+
+.address-form input:focus {
+  outline: none;
+  border-color: #65db81;
+  box-shadow: 0 0 0 2px rgba(101, 219, 129, 0.2);
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 24px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  color: #333;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+.checkout-button:first-of-type:hover {
+  background-color: #218838;
+}
+
+.checkout-button:last-of-type {
+  background-color: #343a40;
+  color: white;
+}
+
+.checkout-button:last-of-type:hover {
+  background-color: #23272b;
+}
+
+@media (max-width: 768px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -58,12 +58,25 @@
 }
 
 .banner-image {
-  width: 100%;
-  max-width: 600px;
-  height: 200px;
+  width: 100vw; /* Full viewport width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150%;
   object-fit: cover;
-  border-radius: 12px;
+  display: block;
+  border-radius: 0; /* Optional: remove if you want sharp corners */
+  margin: 0 auto;
 }
+
+
+.paan-corner {
+  padding: 0;
+  margin: 0;
+}
+.section {
+  padding: 0;
+  margin: 0;
+}
+
 
 /* Sections (Deals, Coffee, Paan Corner) */
 .section {
@@ -78,16 +91,16 @@
 
 /* Paan Corner Special Styling */
 .paan-corner {
-  background: #e0f7fa;
+  background: #ffffff;
   border-radius: 12px;
   padding: 30px;
   text-align: center;
 }
 
 .paan-corner img {
-  width: 200%;
-  max-width: 1500px;
-  height: 200px;
+  width: 300%;
+  max-width: 1700px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;

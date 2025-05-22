@@ -1,4 +1,13 @@
-
+/**
+ * -----------------------------------------------------------------------------
+ * Zepto Clone Application
+ * -----------------------------------------------------------------------------
+ * Developed by: Sourabh Basarikatti
+ * Description : This file is part of the Zepto Clone project, developed to 
+ *               simulate core functionalities and design of the original 
+ *               Zepto application for educational and developmental purposes.
+ * -----------------------------------------------------------------------------
+ */
 
 import React, { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
@@ -51,7 +60,7 @@ const NavbarZepto = () => {
   const handleLogout = () => {
     localStorage.clear();
     setLoggedInUser(null);
-    toast.success('Logged out successfully! 👋', { position: 'top-center' });
+    toast.success('Logged out successfully! ', { position: 'top-center' });
     navigate('/login');
   };
 
@@ -129,14 +138,24 @@ const NavbarZepto = () => {
         </Container>
       </Navbar>
 
-      <div className="category-row" style={{ overflowX: "auto", whiteSpace: "nowrap", background: "#fff", padding: "10px 20px" }}>
-        {categories.map((item, idx) => (
-          <div key={idx} className="d-inline-block text-center mx-3">
-            <img src={`/icons/${item.image}`} alt={item.name} style={{ width: "40px", height: "40px" }} />
-            <div style={{ fontSize: "12px", marginTop: "5px" }}>{item.name}</div>
-          </div>
-        ))}
-      </div>
+
+   
+
+<div className="category-scrollbar">
+  {categories.map((item, idx) => (
+    <div key={idx} className="category-chip">
+      <img
+        src={`/icons/${item.image}`}
+        alt={item.name}
+        className="navbar-category-icon"
+      />
+      <span className="category-label">{item.name}</span>
+    </div>
+  ))}
+</div>
+
+
+      
 
       {showLocationPopup && <LocationPopup onClose={() => setShowLocationPopup(false)} />}
       <ToastContainer />

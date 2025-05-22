@@ -25,7 +25,19 @@ const OrderSuccess = () => {
     <div className="order-success-container">
       <h1>🎉 Thank you for your order!</h1>
       <p>Your order has been placed successfully.</p>
-      <button onClick={() => navigate('/')} className="back-home-btn">Go to Homepage</button>
+      {/* <button onClick={() => navigate('/order-history')} className="back-home-btn">
+  Order History
+</button> */}
+<button
+  type="button"
+  onClick={() => {
+    setTimeout(() => navigate('/order-history'), 200);
+  }}
+  className="back-home-btn"
+>
+  Order History
+</button>
+
     </div>
   );
 };

@@ -203,7 +203,7 @@ const OrderHistory = () => {
 
   return (
     <div className="order-history-container">
-      <h2 className="order-history-title">📦 My Order History</h2>
+      <h2 className="order-history-title">My Order History</h2>
 
       {orders.length === 0 ? (
         <p className="empty-msg">You have not placed any orders yet.</p>
@@ -216,7 +216,7 @@ const OrderHistory = () => {
           return (
             <div key={order._id || idx} className="order-card">
               <div className="order-meta">
-                <strong>Order #{idx + 1}</strong>
+                <strong>Order {idx + 1}</strong>
                 <span className={`status ${order.status === 'Paid' ? 'paid' : 'cod'}`}>
                   {order.status}
                 </span>

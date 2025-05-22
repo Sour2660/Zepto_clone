@@ -1,390 +1,17 @@
-// src/pages/Home.jsx
-// import React, { useContext, useRef } from 'react';
-// import { Link } from 'react-router-dom';
-// import { Container, Row, Col, Button } from 'react-bootstrap';
-// import { CartContext } from '../context/CartContext';
-// import './Home.css';
-// import Footer from '../components/Footer'
+/**
+ * -----------------------------------------------------------------------------
+ * Zepto Clone Application
+ * -----------------------------------------------------------------------------
+ * Developed by: Sourabh Basarikatti
+ * Description : This file is part of the Zepto Clone project, developed to 
+ *               simulate core functionalities and design of the original 
+ *               Zepto application for educational and developmental purposes.
+ * -----------------------------------------------------------------------------
+ */
 
-// const Home = () => {
-//   const { addToCart } = useContext(CartContext);
-//   const dealsRef = useRef(null);
-//   const coffeeRef = useRef(null);
-
-//   const categories = [
-//     { name: "Fruits & Vegetables", img: "/category/fruits.png" },
-//     { name: "Atta, Rice, Oil & Dals", img: "/category/atta.png" },
-//     { name: "Masala & Dry Fruits", img: "/category/masala.png" },
-//     { name: "Zepto Cafe", img: "/category/cafe.png" },
-//     { name: "Sweet Cravings", img: "/category/sweets.png" },
-//     { name: "Toys & Sports", img: "/category/toys.png" },
-//     { name: "Apparel & Lifestyle", img: "/category/apparel.png" },
-//     { name: "Jewellery & Accessories", img: "/category/jewellery.png" },
-//     { name: "Frozen Food", img: "/category/frozen.png" },
-//     { name: "Ice Creams & More", img: "/category/icecream.png" },
-//     { name: "Packaged Food", img: "/category/packaged.png" }
-//   ];
-
-//   const deals = [
-//     { name: "Amul Butter", price: "₹240", img: "/products/amul-butter.jpg" },
-//     { name: "Tata Tea", price: "₹150", img: "/products/tata-tea.jpg" },
-//     { name: "Colgate Toothpaste", price: "₹95", img: "/products/colgate.jpg" },
-//     { name: "Dairy Milk Chocolate", price: "₹85", img: "/products/dairymilk.jpg" },
-//     { name: "Aashirvaad Atta", price: "₹320", img: "/products/atta.jpg" },
-//     { name: "Tropicana Juice", price: "₹110", img: "/products/juice.jpg" },
-//     { name: "Amul Butter", price: "₹240", img: "/products/amul-butter.jpg" },
-//     { name: "Tata Tea", price: "₹150", img: "/products/tata-tea.jpg" },
-//     { name: "Colgate Toothpaste", price: "₹95", img: "/products/colgate.jpg" },
-//     { name: "Dairy Milk Chocolate", price: "₹85", img: "/products/dairymilk.jpg" },
-//     { name: "Aashirvaad Atta", price: "₹320", img: "/products/atta.jpg" },
-//     { name: "Real Mixed Fruit Juice", price: "₹110", img: "/products/realjuice.jpg" }
-  
-    
-//   ];
-
-//   const coffeeDeals = [
-//     { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" },
-//     { name: "Hot Chocolate", price: "₹135", img: "/products/coffee2.png" },
-//     { name: "Classic Cold Coffee", price: "₹159", img: "/products/coffee3.png" },
-//     { name: "Hazelnut Cold Coffee", price: "₹169", img: "/products/coffee4.png" },
-//     { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" },
-//     { name: "Hot Chocolate", price: "₹135", img: "/products/coffee2.png" },
-//     { name: "Classic Cold Coffee", price: "₹159", img: "/products/coffee3.png" },
-//   ];
-
-//   const scrollLeft = (ref) => {
-//     ref.current.scrollBy({ left: -300, behavior: 'smooth' });
-//   };
-
-//   const scrollRight = (ref) => {
-//     ref.current.scrollBy({ left: 300, behavior: 'smooth' });
-//   };
-
-//   return (
-//     <div className="home-container">
-
-//       {/* Categories Scroll */}
-//       <div className="categories-scroll" >
-//         {categories.map((cat, idx) => (
-//           <Link 
-//             key={idx}
-//             to={`/category/${encodeURIComponent(cat.name)}`}
-//             className="category-item"
-//           >
-//             <img src={cat.img} alt={cat.name} className="category-icon" />
-//             {/* <div className="category-name">{cat.name}</div> */}
-//           </Link>
-//         ))}
-//       </div>
-
-//       {/* Paan Corner Section */}
-//       <div className="section paan-corner text-center">
-        
-//         <img src="/banners/PaanCorner.png" alt="Paan Corner" className="banner-image" />
-      
-
-//       </div>
-
-//      {/* Super Sonic + Beauty Lit Section with inner slider */}
-//      <Row className="my-4" style={{ padding: "20px 0" }}>
-//         {/* Left Side */}
-//         <Col md={6} className="mb-3">
-//           <div className="deals-banner d-flex flex-column">
-//             {/* Super Sonic Image */}
-//             <div
-//               style={{
-//                 backgroundColor: "black",
-//                 borderRadius: "12px 12px 0 0",
-//                 overflow: "hidden",
-//               }}
-//             >
-//               <img
-//                 src="\banners\SuperSonic.webp"
-//                 alt="Super Sonic Deals"
-//                 style={{ width: "100%", height: "auto", display: "block" }}
-//               />
-//             </div>
-
-//             {/* Black Slider Container */}
-//             <div
-//               style={{
-//                 backgroundColor: "black",
-//                 borderRadius: "0 0 12px 12px" /* Only bottom round corners */,
-//                 padding: "15px",
-//                 overflowX: "auto",
-//                 whiteSpace: "nowrap",
-//               }}
-//               className="hide-scrollbar"
-//             >
-//               {/* Slider Cards */}
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/deal1.png"
-//                   alt="Deal 1"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/deal2.png"
-//                   alt="Deal 2"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/deal3.png"
-//                   alt="Deal 3"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/deal4.png"
-//                   alt="Deal 4"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/deal5.png"
-//                   alt="Deal 5"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </Col>
-
-//         {/* Right Side - BeautyLit + Pink Slider (no space between) */}
-//         <Col md={6} className="mb-3">
-//           <div className="deals-banner d-flex flex-column">
-//             {/* BeautyLit Image */}
-//             <div
-//               style={{
-//                 background: "linear-gradient(to right, #ffdce0, #ffeef0)",
-//                 borderRadius: "12px 12px 0 0",
-//                 overflow: "hidden",
-//               }}
-//             >
-//               <img
-//                 src="\banners\BeautyLIT.webp"
-//                 alt="Beauty Lit Fest"
-//                 style={{ width: "100%", height: "auto", display: "block" }}
-//               />
-//             </div>
-
-//             {/* Pink Deals Slider Below */}
-//             <div
-//               style={{
-//                 background: "linear-gradient(to right, #ffdce0, #ffeef0)",
-//                 borderRadius: "0 0 12px 12px" /* Only bottom round corners */,
-//                 padding: "15px",
-//                 overflowX: "auto",
-//                 whiteSpace: "nowrap",
-//               }}
-//               className="hide-scrollbar"
-//             >
-//               {/* Slider Cards */}
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty1.png"
-//                   alt="Beauty 1"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty2.png"
-//                   alt="Beauty 2"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty3.png"
-//                   alt="Beauty 3"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty4.png"
-//                   alt="Beauty 4"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty5.png"
-//                   alt="Beauty 5"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//               <div className="deals-card d-inline-block mx-2">
-//                 <img
-//                   src="/Slider/Beauty6.png"
-//                   alt="Beauty 6"
-//                   style={{
-//                     width: "110px",
-//                     height: "100px",
-//                     borderRadius: "12px",
-//                   }}
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </Col>
-//       </Row>
-//       {/* Insurance + JioHotstar + Forex + Bank Cards Section */}
-//       <Row className="my-4 g-3">
-//         <Col md={3} sm={6} xs={12}>
-//           <div
-//             className="info-card shadow-sm rounded"
-//             style={{ overflow: "hidden", background: "#f7f7f7" }}
-//           >
-//             <img
-//               src="/cards/LifeCover.webp"
-//               alt="Life Cover"
-//               style={{ width: "100%", height: "auto", display: "block" }}
-//             />
-//           </div>
-//         </Col>
-
-//         <Col md={3} sm={6} xs={12}>
-//           <div
-//             className="info-card shadow-sm rounded"
-//             style={{ overflow: "hidden", background: "#f7f7f7" }}
-//           >
-//             <img
-//               src="/cards/JioHotstar.webp"
-//               alt="JioHotstar"
-//               style={{ width: "100%", height: "auto", display: "block" }}
-//             />
-//           </div>
-//         </Col>
-
-//         <Col md={3} sm={6} xs={12}>
-//           <div
-//             className="info-card shadow-sm rounded"
-//             style={{ overflow: "hidden", background: "#f7f7f7" }}
-//           >
-//             <img
-//               src="/cards/ZeroForex.webp"
-//               alt="Zero Forex"
-//               style={{ width: "100%", height: "auto", display: "block" }}
-//             />
-//           </div>
-//         </Col>
-
-//         <Col md={3} sm={6} xs={12}>
-//           <div
-//             className="info-card shadow-sm rounded"
-//             style={{ overflow: "hidden", background: "#f7f7f7" }}
-//           >
-//             <img
-//               src="/cards/SavingAcc.webp"
-//               alt="Bank Savings"
-//               style={{ width: "100%", height: "auto", display: "block" }}
-//             />
-//           </div>
-//         </Col>
-//       </Row>
-
-//       {/* Deals of the Day */}
-//       <div className="section">
-//         <h2>Deals of the Day</h2>
-//         <div className="products-scroll" ref={dealsRef}>
-//           {deals.map((product, idx) => (
-//             <div key={idx} className="product-card">
-//               <img src={product.img} alt={product.name} className="product-img" />
-//               <h5 className="product-name">{product.name}</h5>
-//               <p className="product-price">{product.price}</p>
-//               <button className="add-btn" onClick={() => addToCart(product)}>Add to Cart</button>
-//             </div>
-//           ))}
-//         </div>
-//         <Button variant="light" className="scroll-btn left" onClick={() => scrollLeft(dealsRef)}>←</Button>
-//         <Button variant="light" className="scroll-btn right" onClick={() => scrollRight(dealsRef)}>→</Button>
-//       </div>
-
-//       {/* Coffee Lovers */}
-//       <div className="section">
-//         <h2>Coffee Lovers</h2>
-//         <div className="products-scroll" ref={coffeeRef}>
-//           {coffeeDeals.map((coffee, idx) => (
-//             <div key={idx} className="product-card">
-//               <img src={coffee.img} alt={coffee.name} className="product-img" />
-//               <h5 className="product-name">{coffee.name}</h5>
-//               <p className="product-price">{coffee.price}</p>
-//               <button className="add-btn" onClick={() => addToCart(coffee)}>Add to Cart</button>
-//             </div>
-//           ))}
-//         </div>
-//         <Button variant="light" className="scroll-btn left" onClick={() => scrollLeft(coffeeRef)}>←</Button>
-//         <Button variant="light" className="scroll-btn right" onClick={() => scrollRight(coffeeRef)}>→</Button>
-//       </div>
-
-//       {/* Footer */}
-//       <Footer />
-
-//       <footer className="footer">
-//         <div className="footer-grid">
-//            <div className="download-app">
-//           </div>
-//         </div>
-//         <p className="footer-bottom">© 2025 Zepto Clone by Sourabh Basarikatti. All rights reserved.</p>
-//       </footer>
-//     </div>
-//   );
-// };
-
-// export default Home;
-
-// src/pages/Home.jsx
 import React, { useContext, useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import {  Row, Col, Button } from 'react-bootstrap';
 import { CartContext } from '../context/CartContext';
 import './Home.css';
 import Footer from '../components/Footer';
@@ -396,6 +23,9 @@ const Home = () => {
   const coffeeRef = useRef(null);
   const scrollRefMap = useRef({});
   const [categoryProducts, setCategoryProducts] = useState({});
+
+
+  
 
   const cardLinks = {
   LifeCover: "https://www.axismaxlife.com/term-insurance-plans/premium-calculator?utmCode=143713627&utm_source=Partnership_Zepto&utm_medium=Display&utm_content=StaticBanner&utm_theme=2Crore&utm_term=2Cr_876PM_Static_NewParent_NonRS_110325",
@@ -418,16 +48,18 @@ const Home = () => {
     { name: "Packaged Food", img: "/category/packaged.png" }
   ];
 
+
+
   const deals = [
-    { name: "Amul Butter", price: "₹240", img: "/products/amul-butter.jpg" },
-    { name: "Tata Tea", price: "₹150", img: "/products/tata-tea.jpg" },
-    { name: "Colgate Toothpaste", price: "₹95", img: "/products/colgate.jpg" },
-    { name: "Dairy Milk Chocolate", price: "₹85", img: "/products/dairymilk.jpg" },
-    { name: "Aashirvaad Atta", price: "₹320", img: "/products/atta.jpg" },
-    { name: "Tropicana Juice", price: "₹110", img: "/products/juice1.jpg" },
-    { name: "Real Mixed Fruit Juice", price: "₹110", img: "/products/juice.jpg" },
-    { name: "Dairy Milk Chocolate", price: "₹85", img: "/products/dairymilk.jpg" }
-  ];
+  { name: "Amul Butter", price: "₹240", img: "/products/Amul-Salted-Butter.png" },
+  { name: "Tata Tea", price: "₹150", img: "/products/tata-tea.jpg" },
+  { name: "Colgate Toothpaste", price: "₹95", img: "/products/colgate.jpg" },
+  { name: "Dairy Milk Chocolate", price: "₹85", img: "/products/dairymilk.jpg" },
+  { name: "Aashirvaad Atta", price: "₹320", img: "/products/atta.jpg" },
+  { name: "Tropicana Juice", price: "₹110", img: "/products/juice1.jpg" },
+  { name: "Tomato Local", price: "₹40", img: "/products/tomato.png" },
+  { name: "Amul Milk", price: "₹29", img: "/products/Amul.png" }
+];
 
   const coffeeDeals = [
     { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" },
@@ -437,7 +69,7 @@ const Home = () => {
     { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" },
     { name: "Hot Chocolate", price: "₹135", img: "/products/coffee2.png" },
     { name: "Classic Cold Coffee", price: "₹159", img: "/products/coffee3.png" },
-    { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" },
+    { name: "Vietnamese Cold Coffee", price: "₹189", img: "/products/coffee1.png" }
   ];
 
   
@@ -468,7 +100,7 @@ const Home = () => {
     ref.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
-  return (
+   return (
     <div className="home-container">
       <div className="categories-scroll">
         {categories.map((cat, idx) => (
@@ -478,9 +110,12 @@ const Home = () => {
         ))}
       </div>
 
+     
       <div className="section paan-corner text-center">
-        <img src="/banners/PaanCorner.png" alt="Paan Corner" className="banner-image" />
-      </div>
+     <a href="https://www.zepto.com/cn/paan-corner/cigarettes/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/5bcbee47-7c83-4279-80f0-7ecc068496df" target="_blank" rel="noopener noreferrer" >
+     <img src="/banners/PaanCorner.png" alt="Paan Corner" className="banner-image"/>
+      </a>
+     </div>
 
       <Row className="my-4" style={{ padding: "20px 0" }}>
         <Col md={6} className="mb-3">
@@ -513,15 +148,7 @@ const Home = () => {
         </Col>
       </Row>
 
-      {/* <Row className="my-4 g-3">
-        {["LifeCover", "JioHotstar", "ZeroForex", "SavingAcc"].map((card, i) => (
-          <Col key={i} md={3} sm={6} xs={12}>
-            <div className="info-card shadow-sm rounded" style={{ overflow: "hidden", background: "#f7f7f7" }}>
-              <img src={`/cards/${card}.webp`} alt={card} style={{ width: "100%", height: "auto", display: "block" }} />
-            </div>
-          </Col>
-        ))}
-      </Row> */}
+  
       
 <Row className="my-4 g-3">
   {["LifeCover", "JioHotstar", "ZeroForex", "SavingAcc"].map((card, i) => (
@@ -608,7 +235,7 @@ const Home = () => {
       })}
 
       <Footer />
-    </div>
+      </div>
   );
 };
 

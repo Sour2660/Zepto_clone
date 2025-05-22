@@ -1,6 +1,14 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Zepto Clone Application
+ * -----------------------------------------------------------------------------
+ * Developed by: Sourabh Basarikatti
+ * Description : This file is part of the Zepto Clone project, developed to 
+ *               simulate core functionalities and design of the original 
+ *               Zepto application for educational and developmental purposes.
+ * -----------------------------------------------------------------------------
+ */
 
-
-// src/App.js
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
@@ -22,6 +30,7 @@ import OrderSuccess from './pages/OrderSuccess';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import AdminDashboard from './pages/AdminDashboard';
 import VendorDashboard from './pages/VendorDashboard';
+import OrderHistory from './pages/OrderHistory';
 import OrdersPage from './pages/OrderHistory'
 import './App.css';
 
@@ -45,11 +54,13 @@ const AppContent = () => {
         <Route path="/search/:keyword" element={<SearchResults />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/payment" element={<PaymentPage />} />
-        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/OrderSuccess" element={<OrderSuccess />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/my-orders" element={<OrdersPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/order-history" element={<OrderHistory />} />
+
 
         <Route
           path="/admin/dashboard"
